@@ -15,35 +15,33 @@ fs.readFile('./discovery.json',(err,data) => {
 
             if(projects[i]._source.project1 === projects[j]._source.project1){
                 
-                    result[projects[i]._source.project1] = [];
-                    if(projects[i]._source.column1 !== projects[j]._source.column2){
-                        result[projects[i]._source.project1].push(projects[i]._source.column1);
-                        result[projects[i]._source.project1].push(projects[i]._source.column2);
-                    }else{
-                        result[projects[i]._source.project1].push(projects[i]._source.column1);
-                    }
+        
+                    if( ! result[projects[i]._source.project1] instanceof Array);
+                        result[projects[i]._source.project1] = [];
+                  
+                    result[projects[i]._source.project1].push(projects[i]._source.column1);
+                    result[projects[i]._source.project1].push(projects[i]._source.column2);
+
                        
             }
             if(projects[i]._source.project1 === projects[j]._source.project2){
 
-                result[projects[i]._source.project1] = [];
-                if(projects[i]._source.column1 !== projects[j]._source.column2){
-                    result[projects[i]._source.project1].push(projects[i]._source.column1);
-                    result[projects[i]._source.project1].push(projects[i]._source.column2);
-                }else{
-                    result[projects[i]._source.project1].push(projects[i]._source.column1);
-                }
+                if( ! result[projects[i]._source.project1] instanceof Array);
+                    result[projects[i]._source.project1] = [];
+              
+                result[projects[i]._source.project1].push(projects[i]._source.column1);
+                result[projects[i]._source.project1].push(projects[i]._source.column2);
+                
             
             }
             if(projects[i]._source.project2 === projects[j]._source.project2){
 
-                result[projects[i]._source.project1] = [];
-                if(projects[i]._source.column1 !== projects[j]._source.column2){
-                    result[projects[i]._source.project1].push(projects[i]._source.column1);
-                    result[projects[i]._source.project1].push(projects[i]._source.column2);
-                }else{
-                    result[projects[i]._source.project1].push(projects[i]._source.column1);
-                }
+                if( ! result[projects[i]._source.project1] instanceof Array);
+                    result[projects[i]._source.project1] = [];
+              
+                result[projects[i]._source.project1].push(projects[i]._source.column1);
+                result[projects[i]._source.project1].push(projects[i]._source.column2);
+             
             
             }
 
