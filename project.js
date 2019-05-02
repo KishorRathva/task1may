@@ -20,7 +20,7 @@ fs.readFile('./discovery.json',(err,data) => {
                         result[projects[i]._source.project1] = [];
                   
                     result[projects[i]._source.project1].push(projects[i]._source.column1);
-                    result[projects[i]._source.project1].push(projects[i]._source.column2);
+                    result[projects[i]._source.project1].push(projects[j]._source.column1);
 
                        
             }
@@ -30,7 +30,7 @@ fs.readFile('./discovery.json',(err,data) => {
                     result[projects[i]._source.project1] = [];
               
                 result[projects[i]._source.project1].push(projects[i]._source.column1);
-                result[projects[i]._source.project1].push(projects[i]._source.column2);
+                result[projects[i]._source.project1].push(projects[j]._source.column2);
                 
             
             }
@@ -39,8 +39,8 @@ fs.readFile('./discovery.json',(err,data) => {
                 if( ! result[projects[i]._source.project1] instanceof Array);
                     result[projects[i]._source.project1] = [];
               
-                result[projects[i]._source.project1].push(projects[i]._source.column1);
                 result[projects[i]._source.project1].push(projects[i]._source.column2);
+                result[projects[i]._source.project1].push(projects[j]._source.column2);
              
             
             }
