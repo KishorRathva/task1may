@@ -45,6 +45,7 @@ fs.readFile('./discovery.json',(err,data) => {
 
             
         }
+        result[projects[i]._source.project1] = Array.from(result[projects[i]._source.project1]);;
     }
     console.log(result);
 });
